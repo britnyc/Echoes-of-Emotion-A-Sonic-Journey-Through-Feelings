@@ -49,19 +49,21 @@
 		}
 
 		.c1 {
-			font-family: Montserrat Alternates;
+			font-family: "Montserrat Alternates", sans-serif;
 			background-color: #FFF0F5;
 			text-align: center;
-			width: 700px;
-			height: 250px;
+			width: 90%;
+			max-width: 700px;
+			min-height: 250px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			overflow: hidden;
+			overflow-wrap: break-word;
+			word-break: break-word;
 			padding: 20px;
 			border-radius: 250px;
 			box-sizing: border-box;
-			margin-bottom: 50px; /* Space between the first section and the next */
+			margin-bottom: 50px;
 		}
 
 		.mega {
@@ -135,6 +137,14 @@
     		color: inherit; 
     		text-decoration: none; 
 		}
+
+		@media (max-width: 750px) {
+  			.c1 {
+  		    width: 90%;
+      		height: auto;
+    		border-radius: 20px}
+}
+
 
 
 	</style>

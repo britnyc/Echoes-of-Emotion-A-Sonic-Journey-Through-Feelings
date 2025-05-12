@@ -8,7 +8,7 @@
 	<title>Serenity</title>
 	<style type="text/css">
 		body, html{
-			height: 100%;
+			height: 900px;
 			margin: 0;
 			padding: 20px;
 			background-color: white;
@@ -94,12 +94,29 @@
 </div>
 
 
-<div class="img">
-    <a href="https://soundcloud.com/user-70608789/serenity_mixdown" target="_blank">
-        <img src="cb.jpeg" alt="Happiness Image">
-    </a>
+<div class="img" style="text-align: center;">
+    <!-- Image that will trigger the audio -->
+    <img src="cb.jpeg" alt="Happiness Image" id="playable-image" style="cursor: pointer;">
+
+    <!-- Audio controls -->
+    <audio id="my-audio" controls>
+        <source src="SERENITY_mixdown.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <p></p>
 </div>
+
+<script>
+    const audio = document.getElementById("my-audio");
+    const image = document.getElementById("playable-image");
+
+    // Play audio when image is clicked
+    image.addEventListener("click", () => {
+        audio.play();
+    });
+</script>
+
 
 
 </div>

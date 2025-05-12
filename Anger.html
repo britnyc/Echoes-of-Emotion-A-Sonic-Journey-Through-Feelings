@@ -8,7 +8,7 @@
 	<title>Anger</title>
 	<style type="text/css">
 		body, html{
-			height: 100%;
+			height: 950px;
 			margin: 0;
 			padding: 20px;
 			background-color: white;
@@ -94,11 +94,26 @@
 
 
 <div class="img">
-    <a href="https://soundcloud.com/user-70608789/anger_mixdown" target="_blank">
-        <img src="redd.jpeg" alt="Happiness Image">
+        <img src="redd.jpeg" alt="Happiness Image" id="happiness-img">
     </a>
+
+    <!-- Audio player under the image -->
+    <audio id="happiness-audio" controls>
+        <source src="anger_mixdown.mp3" type="audio/mp3"> 
+    </audio>
+    
     <p></p>
 </div>
+
+<script>
+    const audio = document.getElementById("happiness-audio");
+    const image = document.getElementById("happiness-img");
+
+    image.addEventListener("click", () => {
+        audio.play();
+    });
+</script>
+
 
 
 </div>

@@ -8,7 +8,7 @@
 	<title>Anxiety</title>
 	<style type="text/css">
 		body, html{
-			height: 100%;
+			height: 1000px;
 			margin: 0;
 			padding: 20px;
 			background-color: white;
@@ -94,11 +94,28 @@
 
 
 <div class="img">
-    <a href="https://soundcloud.com/user-70608789/anxiety_mixdown" target="_blank">
-        <img src="grey.jpeg" alt="Happiness Image">
-    </a>
+    <!-- Audio player above the image -->
+    <audio id="anxiety-audio" controls>
+        <source src="ANXIETY_mixdown.mp3" type="audio/mp3">  
+    </audio>
+    
+    
+    <img src="grey.jpeg" alt="Happiness Image" id="anxiety-img" style="cursor: pointer;">
+    
     <p></p>
 </div>
+
+<script>
+    const audio = document.getElementById("anxiety-audio");
+    const image = document.getElementById("anxiety-img");
+
+    
+    image.addEventListener("click", () => {
+        audio.play();
+    });
+</script>
+
+
 
 
 </div>

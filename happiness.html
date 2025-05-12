@@ -8,7 +8,7 @@
 	<title>Happiness</title>
 	<style type="text/css">
 		body, html{
-			height: 100%;
+			height: 900px;
 			margin: 0;
 			padding: 20px;
 			background-color: white;
@@ -44,14 +44,14 @@
 		.c1 {
 			background-color: #FFF0F5;
 			text-align: center;
-			width: 700px;
-			height: 250px;
+			width: auto;
+			height: auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			overflow: hidden;
 			padding: 20px;
-			border-radius: 250px;
+			border-radius: 50px;
 			box-sizing: border-box;
 			margin-bottom: 50px;
 			font-family: Notable;
@@ -77,8 +77,6 @@
 		}
 
 
-
-
 	</style>
 </head>
 <body>
@@ -92,13 +90,27 @@
 </div>
 
 
-<div class="img">
-    <a href="https://soundcloud.com/user-70608789/happiness-mixdown" target="_blank">
-        <img src="cd1.jpeg" alt="Happiness Image">
-    </a>
+<div class="img" style="display: flex; flex-direction: column; align-items: center;">
+    <!-- Audio player under the image -->
+    <audio id="happiness-audio" controls>
+        <source src="Happiness _mixdown.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- Image above the audio player -->
+    <img src="cd1.jpeg" alt="Happiness Image" id="happiness-img" style="max-width: 400px; height: 400px;">
+    
     <p></p>
 </div>
 
+<script>
+    const audio = document.getElementById("happiness-audio");
+    const image = document.getElementById("happiness-img");
+
+    // Optional: make the image clickable to play audio
+    image.addEventListener("click", () => {
+        audio.play();
+    });
+</script>
 
 </div>
 
